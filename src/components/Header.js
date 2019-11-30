@@ -4,11 +4,9 @@ import {Navbar , Nav } from 'react-bootstrap'
 
 function Header(props){
 
+ const  logger =()=>{
 
-
- const  onLogin =()=>{
-
-      props.onLogin();
+      props.logger();
   }
     return(
 
@@ -18,7 +16,7 @@ function Header(props){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link    href="#link" onClick ={ () => onLogin() } >Login</Nav.Link>
+            <Nav.Link    href="#link" onClick ={logger} >{props.log}</Nav.Link>
            
           </Nav>
          
